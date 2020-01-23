@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+.cabeceraSzpali {
+  border: 2px solid red;
+}
+.cabeceraSzpali__figura {
+  display: grid;
+  justify-content: center;
+  border: 2px solid red;
+}
+.cabeceraSzpali__figura img {
+  border: 2px solid red;
+}
+.cabeceraSzpali__figura figcaption {
+  border: 2px solid red;
+  text-align: center;
+}
+.cabeceraSzpali__licencia {
+  display: grid;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+.seccionSzpali {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 2px solid red;
+}
+.seccionSzpali__capa1 {
+  display: grid;
+  justify-content: center;
+  border: 2px solid red;
+}
+.seccionSzpali__capa2 {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  border: 2px solid red;
+}
+.seccionSzpali__capa2 > button {
+  padding: 10px;
+  border-radius: 50%;
+  height: 40px;
+  background-color: plum;
+  border: 2px solid paleturquoise;
+}
+
+.pieSzpali {
+  display: grid;
+  grid-template-columns: 60% 10% 30%;
+}
+.pieSzpali__capa1 {
+  display: grid;
+  justify-content: center;
+  border: 2px solid salmon;
+}
+.pieSzpali__capa1 > canvas {
+  border: 2px solid black;
+}
+.pieSzpali__capa2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid salmon;
+}
+.pieSzpali__capa3 {
+  border: 2px solid salmon;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+/*# sourceMappingURL=style_szpali_ej2.css.map */

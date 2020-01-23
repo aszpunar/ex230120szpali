@@ -1,0 +1,76 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+.cabeceraSzpali{
+    border: 2px solid red;
+    &__figura{
+        display: grid;
+        justify-content: center;
+        border: 2px solid red;
+        img{
+            border: 2px solid red; 
+        }
+        figcaption{
+            border: 2px solid red;
+            text-align: center;
+        }
+    }
+    &__licencia{
+        display: grid;
+        justify-content: center;
+        border: 2px solid red;
+   }
+}
+
+.seccionSzpali{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 2px solid red;
+    &__capa1{
+        display: grid;
+        justify-content: center;
+        border: 2px solid red;
+    }
+    &__capa2{
+        display: grid;
+        justify-content: start;
+        align-content: center;
+        border: 2px solid red;
+        > button{
+            padding: 10px;
+            border-radius: 50%;
+            height: 40px;
+            background-color: plum;
+            border: 2px solid paleturquoise;
+        }
+    }
+}
+
+.pieSzpali{
+    display: grid;
+    grid-template-columns: 60% 10% 30% ;
+     &__capa1{
+        display: grid;
+        justify-content: center; 
+        border: 2px solid salmon;
+         > canvas{
+            border: 2px solid black;
+         }
+     }
+     &__capa2{
+         display: grid;
+         justify-content: center;
+         align-items: center;
+        border: 2px solid salmon;
+     }
+     &__capa3{
+        border: 2px solid salmon;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        
+    }
+}
