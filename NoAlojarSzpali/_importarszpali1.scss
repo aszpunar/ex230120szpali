@@ -1,0 +1,9 @@
+@mixin padding_Szpali($pad) {
+    padding: $pad;
+}
+
+.contenedorSectionszpali{
+    > div{
+        @include padding_Szpali(20px);
+    }
+}

@@ -1,0 +1,96 @@
+@import "importarszpali1.scss";
+
+%bordes{
+border: 2px dashed black;
+}
+%bordeAzul{
+border: 2px dashed blue;
+}
+%centrado{
+    display: block;
+    margin: auto;
+}
+@mixin  bordeVariable($color) {
+    border: 2px dashed $color;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.contenedorHeaderszpali{
+    @extend %bordes;
+    &__encabezado{
+        text-align: center;
+    }
+    &__figura{
+        &__imagen1{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__licencia{
+        display: grid;
+        justify-content: center;
+    }
+}
+
+.contenedorSectionszpali{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    min-height: 400px;
+    &__SzpaliContenedor1ConBordeVerde{
+        @include bordeVariable(green);
+
+    }
+    &__SzpaliContenedor2ConBordeAzul{
+        @extend %bordeAzul;
+        
+        &__boton{
+            @extend %centrado;
+            > img{
+                object-fit: scale-down;
+            }
+           > #contendorId{
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+
+.contenedorFooterszpali{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    border: 2px solid black;
+
+    &__capa1{
+        border: 2px solid salmon;
+        > button{
+            @extend %centrado;
+        }
+        > div{
+            text-align: center;
+        }
+    }
+    &__capa2{
+        border: 2px solid salmon;
+
+        > audio{
+            @extend %centrado;
+        }
+        > button{
+            @extend %centrado;
+        }
+    }
+    &__capa3{
+        border: 2px solid salmon;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        > a{
+            
+        }
+    }
+}

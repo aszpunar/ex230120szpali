@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style_szpali_ej1.css">
+    <script type="text/javascript" src="localszpali.js"></script>
+    <title>Examen 23-01-2020 / szpali / Ej1</title>
+</head>
+
+<body>
+    <header class="contenedorHeaderszpali">
+        <h1 class="contenedorHeaderszpali__encabezado">Inicio del examen 23-01-2020. Alumno: SZPALI</h1>
+        <figure class="contenedorHeaderszpali__figura">
+            <img class="contenedorHeaderszpali__figura__imagen1" src="recursos/Recurso1.png" title="imagen1"
+                alt="Imagen 1">
+            <figcaption class="contenedorHeaderszpali__figura__etiquetado">
+                Imagen editada por SZPALI
+            </figcaption>
+        </figure>
+        <div class="contenedorHeaderszpali__licencia">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                <img alt="Licencia Creative Commons" style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+            </a>
+        </div>
+
+    </header>
+
+    <section class="contenedorSectionszpali">
+
+        <div class="contenedorSectionszpali__SzpaliContenedor1ConBordeVerde">
+            <picture>
+                <source media="(min-width:500px)" srcset="recursos/Recurso2.jpg">
+                <source media="(min-width:400px)" srcset="recursos/Recurso3.jpg">
+                <img src="recursos/Recurso4.jpg" alt="Recurso4" title="Recurso4" style="width: auto;">  
+            </picture>
+        </div>
+        <div class="contenedorSectionszpali__SzpaliContenedor2ConBordeAzul">
+
+            <button class="contenedorSectionszpali__SzpaliContenedor2ConBordeAzul__boton" onclick="verContador()"><img src="recursos/Recurso5.png" alt=""> Aumentar</button>
+            <p id="contenedorId">Aquí aparecerán los clicks</p>
+        </div>
+
+    </section>
+
+    <footer class="contenedorFooterszpali">
+        <div class="contenedorFooterszpali__capa1">
+            <button onclick="multiplico()"> <img src="recursos/Recurso6.png" alt=""> Session</button>
+            <div id="sessionId">VALOR</div>
+        </div>
+        <div class="contenedorFooterszpali__capa2">
+            <audio id="audioCapa2" controls>
+                <source src="recursos/Recurso7.mp3" type="audio/mpeg">
+                <source src="recursos/Recurso7.ogg" type="audio/ogg">
+                <source src="recursos/Recurso7.wav" type="audio/wav">
+                    Tu navegador no es compatible
+            </audio>
+            <button onclick="document.getElementById('audioCapa2').currentTime=0">Reiniciar audio</button>
+        </div>
+        <div class="contenedorFooterszpali__capa3">
+            <a href="szp_äli_230130_ej2.html">Ir al ejercicio 2</a>
+        </div>
+    </footer>
+</body>
+
+</html>
