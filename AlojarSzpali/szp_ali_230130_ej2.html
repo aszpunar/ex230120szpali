@@ -10,6 +10,30 @@
 </head>
 
 <body>
+    <nav class="barraNavSzpali">
+        <div class="barraNavSzpali__localizacion">
+            <div><button onclick="obtenerLocalizacion('campoLatitud','campoLongitud')"><img src="recursos/Recurso11.jpg" alt="Geolocalizacion" title="Geolocalizacion"></button o></div>
+            <div>Longitud <input name="clongitud" id="campoLongitud" type="text"></div>
+            <div>Latitud <input name="clatitud" id="campoLatitud" type="text"></div>
+        </div>
+        <script>
+            function obtenerLocalizacion(idlati, idlong) {
+            elementoLat = document.getElementById(idlati);
+            elementoLong = document.getElementById(idlong);
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(mostrarPosicion); 
+            } else {
+                elementoLat.innerHTML = "Tu navegador no soporta geolocalización";
+                elementoLong.innerHTML = "Tu navegador no soporta geolocalización";
+            }
+        }
+
+        function mostrarPosicion(posicion) {
+            elementoLat.value = posicion.coords.latitude;
+            elementoLong.value = posicion.coords.longitude; 
+        }
+        </script>
+    </nav>
     <header class="cabeceraSzpali">
         <figure class="cabeceraSzpali__figura">
             <img class="cabeceraSzpali__figura__img" src="recursos/logoSzpali.png" alt="Milogo" title="Logo Szpali">
@@ -22,7 +46,7 @@
             </a>
         </div>
     </header>
-
+    
     <section class="seccionSzpali">
         <div class="seccionSzpali__capa1">
             <video id="videoSzpali" autoplay controls loop="loop">
@@ -48,12 +72,28 @@
             <canvas class="pieSzpali1__capa1__canvas" id="canvasId">
 
             </canvas>
+            <img id="imgCanvas"src="recursos/Recurso10.jpg" alt="Imagen10" style="display: none;">
+            
         </div>
         <div class="pieSzpali__capa2">
-            <button><img src="recursos/Recurso9.gif" alt="Dibujar" title="dibujar"></button>
+            <button onclick="dibujar()"><img src="recursos/Recurso9.gif" alt="Dibujar" title="dibujar"></button>
+            <script>
+                function dibujar(){
+                    var canvasvar1 = document.getElementById("canvasId");
+                     var contexto1 = canvasvar1.getContext("2d");
+                     var imagen1 = document.getElementById("imgCanvas");
+                     contexto1.drawImage(imagen1, 5, 5); /*eje x, eje y*/
+                     //En x=175 termina la img
+                     contexto1.moveTo(175, 0);
+                    contexto1.lineTo(175, 100); 
+                    contexto1.lineTo(250, 100); 
+                    contexto1.lineTo(250, 100); 
+                }
+               
+            </script>
         </div>
         <div class="pieSzpali__capa3">
-            <a href="szp_ali_230130_ej3.html">Ir al ejercicio 3</a>
+            <a href="szp_ali_230130_ej1.html">Ir al ejercicio 1</a>
         </div>
     </footer>
 </body>

@@ -72,4 +72,28 @@
   align-content: center;
 }
 
+.barraNavSzpali__localizacion {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  font-family: monospace;
+  background-color: grey;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.barraNavSzpali__localizacion > div {
+  border: 2px solid plum;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  .barraNavSzpali__localizacion {
+    position: relative;
+    grid-template-columns: auto;
+  }
+}
+
 /*# sourceMappingURL=style_szpali_ej2.css.map */
